@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- table태그 : 표를 만드는 태그
+        tr태그 : 표의 행(가로)
+        th태그 : 표의 제목열
+        td태그 : 표의 일반열
+    
+        caption태그 : 표의 제목 또는 설명을 작성
+    
+        !영역을 쉽게 파악하기위한 태그!
+        thead 태그 : 표의 제목 열 등을 묶는 태그
+        tbody 태그 : 표의 일반 열 또는 데이터를 묶는 그룹태그
+        tfoot 태그 : 표의 하단영역을 묶는 그룹태그
+    
+        colgroup 태그 : 열의 그룹을 정의해서, 해당 열에 스타일이나 속성을 그룹화 할 수 있는 태그
+        col 태그 : colgroup 태그 자식태그로 열 단위를 나눌 때 사용하는 태그
+    
+        **속성태그**
+        colspan : 열을 병합하는 속성
+            예) <td colspan="2">평균</td>
+        rowspan : 행을 병합하는 속성
+            예) <td rowspan="2">1반</td>
+        병합할 다음셀은 지워줘야함.
+        위 두 속성은 테이블태그에서만 사용 가능.-->
+
+        <table>
+            <tr>
+                <th>제목 열</th>
+                <td>일반 열</td>
+            </tr>
+        </table>
+            <br>
+            <h1>그린학교 성적표</h1>
+        <table>
+            <caption>1반 성적표</caption>
+            <colgroup>
+                <col>
+                <col>
+                <col style="background-color: yellow;">
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <tr>
+                <th>반</th>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>과학</th>
+            </tr>
+            <tr>
+                <td rowspan="2">1반</td>
+                <td>홍길동</td>
+                <td>100점</td>
+                <td>50점</td>
+                <td>30점</td>
+                <td>40점</td>
+            </tr>
+            <!-- th>td*6 -->
+            <tr>
+                <!-- <td>1반</td> -->
+                <td>이나라</td>
+                <td>80점</td>
+                <td>50점</td>
+                <td>30점</td>
+                <td>70점</td>
+            </tr>
+            <tr>
+                <td colspan="2">평균</td>
+                <!-- <td></td> -->
+                <td>90점</td>
+                <td>50점</td>
+                <td>30점</td>
+                <td>55점</td>
+            </tr>
+        </table>
+
+</body>
+</html>
